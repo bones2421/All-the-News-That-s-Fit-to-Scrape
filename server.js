@@ -1,6 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+const path = require("path");
 
 
 // Our scraping tools
@@ -22,7 +23,8 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '/public')));
+
 
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/mongoScraper", { useNewUrlParser: true });
