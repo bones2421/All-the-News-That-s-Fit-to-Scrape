@@ -1,7 +1,6 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-require("./routes/apiRoutes")(app);
 
 
 // Our scraping tools
@@ -13,6 +12,7 @@ var PORT = 3000;
 
 // Initialize Express
 var app = express();
+require("./routes/apiRoutes")(app);
 
 // Configure middleware
 

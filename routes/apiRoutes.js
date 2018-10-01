@@ -3,7 +3,7 @@ var cheerio = require("cheerio")
 var models = require("../models/Article.js")
 var db = require('../models')
 var express = require("express");
-var routes = require("../public/app.js")
+// var routes = require("../public/js/app.js")
 
 // Routes
 
