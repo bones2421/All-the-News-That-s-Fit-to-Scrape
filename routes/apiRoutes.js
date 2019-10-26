@@ -1,7 +1,7 @@
-var axios = require("axios")
-var cheerio = require("cheerio")
-var models = require("../models/Article.js")
-var db = require('../models')
+var axios = require("axios");
+var cheerio = require("cheerio");
+var models = require("../models/Article.js");
+var db = require('../models');
 var express = require("express");
 // var routes = require("../public/js/app.js")
 
@@ -11,7 +11,7 @@ module.exports = function (app) {
     // A GET route for scraping the echoJS website
     app.get("/scrape", function (req, res) {
         // First, we grab the body of the html with axios
-        axios.get("https://www.npr.org/").then(function (response) {
+        axios.get("https://www.reddit.com/").then(function (response) {
             // Then, we load that into cheerio and save it to $ for a shorthand selector
             var $ = cheerio.load(response.data);
 
@@ -98,4 +98,4 @@ module.exports = function (app) {
                 res.json(err);
             });
     });
-}
+};
